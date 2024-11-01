@@ -38,7 +38,7 @@ parent: Cyber Defenders
 # Initial Access
 
 Initial Access was gained as a *guest* user of the website `bookworldstore.com`. From here, the attacker (Source IP of **111.224.250.131**) manually enumerated endpoints by exploring the website as evident from the network traffic.
-[![Manual Network Traffic](/images/cyber-defenders/web-investigation-lab/manual_exploring.png)](https://dbeehler.github.io/dbeehler-pages/images/cyber-defenders/web-investigation-lab/manual_exploring.png)
+![Manual Network Traffic](https://dbeehler.github.io/dbeehler-pages/images/cyber-defenders/web-investigation-lab/manual_exploring.png)
 
 # Exploitation
 
