@@ -1,4 +1,4 @@
 ---
 title: New File
-parent: cyber-defenders
+parent: Cyber Defenders
 ---
