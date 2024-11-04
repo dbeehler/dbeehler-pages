@@ -26,10 +26,15 @@ parent: Cyber Defenders
 - [Discovery](#discovery)
 - [Privelege Escalation](#privelege-escalation)
 - [Persistence](#persistence)
-- [Takeaways](#takeaways)
 
 
 # Case Summary
+
+An attack was successfully executed on the Bookworld Store website.
+
+Starting with manual recon and moving into automated means, the attacker was able to elevate to admin priveleges and exfiltrate customer data. The attacker was able to then upload a PHP reverse shell to the webserver through he admin permissions.
+
+It should be assumed that this webserver was/is fully compromised.
 
 # Analysts
 
@@ -46,16 +51,20 @@ Upon discovering the search feature, the attacker attempted to execute SQL comma
 
 # Exfiltration
 
+The SQLmap application was able to enumerate all database information. The attacker started with printing the table names and then moving on to examine the `admin` table.
+
+The attacker was able to return the admin users's username and password which was used later in the attack. Additionally, they were able to print information from the customer database including addresses, emails, names, and phone numbers.
 
 # Discovery
 
-
+In addition to using SQLmap, the attacker utilized gobuster. Gobuster is a command line tool to brute force directories on a web server. Using this, they were able to locate the `/admin`.
 
 # Privelege Escalation
 
-
+Using the admin permissions gained before, the attacker logged in as the admin user at 12:17:35.
 
 # Persistence
 
+After logging into an admin account, the user was able to locate the upload functionality. They successfully uploaded a file, `NVri2vhp.php` at 12:24:18. 
 
-# Takeaways
+Due to the nature of the lab, this is the last recorded activity available.
